@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="infantiles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+</div>
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+<br>
+
+<div class="conta">
+    <div class="espacio">
+        <img src="Que hacer cuando todo cambia.webp" width="200" class="imagen">
+        <h3 class="titulo">Que hacer cuando todo cambia</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('Que hacer cuando todo cambia', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="El mono estresado.webp" width="200" class="imagen">
+        <h3 class="titulo">El mono estresado</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('El mono estresado', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="seres sintientes.webp" width="200" class="imagen">
+        <h3 class="titulo">Seres sintientes</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('Seres sintientes', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="La historia universal de nosotros.webp" width="200" class="imagen">
+        <h3 class="titulo">La historia universal</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('La historia universal', 100)">Añadir al carrito</button>
+    </div>
+
+    <!-- Nuevas tarjetas de libros de ciencia -->
+    <div class="espacio">
+        <img src="https://imagessl9.casadellibro.com/a/l/s7/39/9788491997139.webp" width="200" class="imagen">
+        <h3 class="titulo">El universo en una cáscara de nuez</h3>
+        <h2 class="precio">$120</h2>
+        <button onclick="addToCart('El universo en una cáscara de nuez', 120)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="breves respustas.jpeg" width="200" class="imagen">
+        <h3 class="titulo">Breves respuestas a las grandes preguntas</h3>
+        <h2 class="precio">$150</h2>
+        <button onclick="addToCart('Breves respuestas a las grandes preguntas', 150)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="cosmos.jpg" width="200" class="imagen">
+        <h3 class="titulo">Cosmos</h3>
+        <h2 class="precio">$200</h2>
+        <button onclick="addToCart('Cosmos', 200)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="La teoría del todo libro.jpeg" width="200" class="imagen">
+        <h3 class="titulo">La teoría del todo</h3>
+        <h2 class="precio">$180</h2>
+        <button onclick="addToCart('La teoría del todo', 180)">Añadir al carrito</button>
+    </div>
+</div>
+
+<script>
+    // Función para filtrar los productos según la búsqueda
+    document.getElementById('searchInput').addEventListener('input', function() {
+        let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+        let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+    
+        items.forEach(item => {
+            let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+            
+            if (title.includes(searchQuery)) {
+                item.style.display = 'block'; // Si coincide, muestra el elemento
+            } else {
+                item.style.display = 'none'; // Si no coincide, oculta el elemento
+            }
+        });
+    });
+</script>
+</body>
+</html>

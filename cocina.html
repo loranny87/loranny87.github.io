@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="infantiles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+  </div>
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+<br>
+
+<div class="conta">
+    <div class="espacio">
+        <img src="Ramen.webp" width="200" class="imagen">
+        <h3 class="titulo">Ramen</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('Ramen', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="El gran manual del coctelero.webp" width="200" class="imagen">
+        <h3 class="titulo">El gran manual del coctelero</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('El gran manual del coctelero', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="La nevera media llena.webp" width="200" class="imagen">
+        <h3 class="titulo">La nevera media llena</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('La nevera media llena', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="bikinis creativos.webp" width="200" class="imagen">
+        <h3 class="titulo">Bikinis creativos</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('Bikinis creativos', 100)">Añadir al carrito</button>
+    </div>
+
+    
+
+
+    <div class="espacio">
+        <img src="cocina vegana.webp" width="200" class="imagen">
+        <h3 class="titulo">Cocina vegana</h3>
+        <h2 class="precio">$120</h2>
+        <button onclick="addToCart('Cocina vegana', 120)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71N4oeWwYlL.jpg" width="200" class="imagen">
+        <h3 class="titulo">Postres del mundo</h3>
+        <h2 class="precio">$110</h2>
+        <button onclick="addToCart('Postres del mundo', 110)">Añadir al carrito</button>
+    </div>
+ 
+    <div class="espacio">
+        <img src="La-cerveza.jpg" width="200" class="imagen">
+        <h3 class="titulo">Cerveza artesanal</h3>
+        <h2 class="precio">$130</h2>
+        <button onclick="addToCart('Cerveza artesanal', 130)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71QKQ9mwV7L.jpg" width="200" class="imagen">
+        <h3 class="titulo">Panes tradicionales</h3>
+        <h2 class="precio">$115</h2>
+        <button onclick="addToCart('Panes tradicionales', 115)">Añadir al carrito</button>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    // Función para filtrar los productos según la búsqueda
+    document.getElementById('searchInput').addEventListener('input', function() {
+        let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+        let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+
+        items.forEach(item => {
+            let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+            
+            if (title.includes(searchQuery)) {
+                item.style.display = 'block'; // Si coincide, muestra el elemento
+            } else {
+                item.style.display = 'none'; // Si no coincide, oculta el elemento
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

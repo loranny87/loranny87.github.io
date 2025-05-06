@@ -1,0 +1,154 @@
+*{
+
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+  
+  
+  
+  }
+
+
+
+html{
+  
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding: 6rem;
+    overflow-x: hidden;
+    
+    }
+    
+    section{
+    padding: 2rem 9%;
+    
+    }
+    
+    
+    header{
+    
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0);
+    
+    }
+    
+    header .logo{
+    
+    font-size: 3rem;
+    color: black;
+    font-weight: bolder;
+    
+    }
+    
+    header .logo span{
+    
+    color: rgb(250, 186, 186);
+    
+    }
+    
+    header .navbar a{
+    
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: rgb(250, 186, 186);
+    
+    }
+    
+    header .navbar a:hover{
+    
+    color:rgb(0, 0, 0)
+    
+    }
+    
+    header .icons a{
+    
+    font-size: 2.5rem;
+    color: black;
+    margin-left: 1.5rem;
+    
+    }
+    
+    .home{
+     display: flex;
+     align-items: center;
+     min-height: 100vh;
+    background: url(imagenes/Gahca\ airport\ background.jpeg);
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .home .content{
+    max-width: 50rem;
+    }
+    
+    .home .content h3{
+    font-size: 6rem;
+    color: bisque;
+    }
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* media queries */
+ @media (max-width:991px) {
+      
+    html{
+        font-size: 55%;
+        }
+        
+        header{
+            padding: 2rem;
+        }
+}
+
+@media (max-width:768px){
+   header .fa-bars{
+   display: block;
+   }
+
+   header .navbar{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background-color: aliceblue;
+    border-top:  .1rem solid black;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   header #toggler:checked .navbar{
+   clip-path:(0 0, 100% 0, 100% 0, 0 0); ;
+
+   }
+
+
+   header .navbar a{
+margin: 1.5rem;
+padding: 1.5rem;
+background-color: aliceblue;
+border: .1rem solid black;
+display: block;
+   }
+}
+
+@media (max-width:450px) {
+    
+    html{
+        font-size: 50%;
+        }
+        
+       
+}

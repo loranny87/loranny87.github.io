@@ -1,0 +1,108 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="valores.css">
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+    <a href="#" class="logo">Books<span>.Shop</span></a>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="valores.html">Quiénes Somos</a>
+        <a href="ubicados.html">Ubicación</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+        <i class="search-icon fas fa-search"></i>
+    </div>
+    
+</header>
+    </header>
+    <!-- header section starts-->
+
+ <!-- Contenedor principal -->
+<div class="container">
+    <!-- Primer cuadro -->
+    <div class="card">
+      
+        
+        <div class="contenido">
+            <h3>Misión</h3>
+            <p> 
+
+                En Books.shop, nuestra misión es inspirar y enriquecer las vidas de nuestros clientes a través del poder de la literatura. Nos dedicamos a ofrecer una amplia selección de libros de alta calidad que abarquen todos los géneros y temas, desde los clásicos atemporales hasta las novedades más recientes. Creemos que cada libro tiene el potencial de abrir puertas hacia nuevos mundos, expandir horizontes y fomentar una comunidad de lectores apasionados.
+
+            </p>
+        </div>
+    </div>
+
+    <!-- Segundo cuadro -->
+    <div class="card">
+        
+        <div class="contenido">
+            <h3>Valores</h3>
+            <p>
+               
+                Creemos que los libros son más que páginas y palabras; son ventanas a nuevos mundos y experiencias. Nuestra pasión por la lectura nos impulsa a ofrecer una amplia selección de títulos para todos los gustos y
+
+                Valoramos la diversidad en todas sus formas y nos esforzamos por incluir libros de autores de diferentes culturas, géneros y perspectivas. 
+                
+                Fomentamos un sentido de comunidad entre los amantes de los libros.
+
+            </p>
+        </div>
+    </div>
+
+    <!-- Tercer cuadro -->
+    <div class="card">
+        
+        <div class="contenido">
+            <h3>Visión</h3>
+            <p>
+                En Books.shop, nuestra visión es ser el destino preferido de los amantes de los libros en todo el mundo. Aspiramos a crear una plataforma donde la diversidad literaria se celebre y donde cada lector encuentre su próximo libro favorito. Imaginamos un mundo donde la lectura sea accesible para todos, donde las barreras geográficas y económicas no limiten el acceso a las historias y el conocimiento.
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+<center>
+
+    <video controls src="5 Beneficios de la lectura científicamente probados.mp4"></video>
+
+    </center>
+
+
+
+    <script>
+        // Función para filtrar los productos según la búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+            let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+      
+            items.forEach(item => {
+                let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                
+                if (title.includes(searchQuery)) {
+                    item.style.display = 'block'; // Si coincide, muestra el elemento
+                } else {
+                    item.style.display = 'none'; // Si no coincide, oculta el elemento
+                }
+            });
+        });
+      </script>
+      

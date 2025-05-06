@@ -1,0 +1,455 @@
+
+*{
+
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   outline: none; border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   transition: .2s linear;
+ 
+ 
+ 
+ }
+ 
+ 
+ html{
+ 
+ font-size: 62.5%;
+ scroll-behavior: smooth;
+ scroll-padding: 6rem;
+ overflow-x: hidden;
+ 
+ }
+ 
+ section{
+ padding: 2rem 9%;
+ 
+ }
+ 
+ 
+ 
+ /* Estilos generales del menú */
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 50px;
+   background-color: #ffc0c0;
+   color: white;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+   display: flex;
+   gap: 20px;
+}
+
+.navbar a {
+   text-decoration: none;
+   color: white;
+   font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+   font-weight: 500;
+   position: relative;
+   padding: 15px 30px; /* Aumenta el padding para que el botón sea más grande */
+   transition: all 0.3s ease;
+   border-radius: 5px;
+}
+
+.navbar a:hover {
+   background-color: #ffffff;
+   color: rgb(0, 0, 0);
+   transform: scale(1.1); /* Agranda el botón al pasar el mouse */
+}
+
+
+.search-container {
+   display: flex;
+   align-items: center;
+   position: relative;
+   margin-right: 20px; /* Añadido para separar la búsqueda del carrito */
+}
+
+.search-input {
+   padding: 8px 20px;
+   font-size: 1rem;
+   border-radius: 20px;
+   border: 1px solid #ddd;
+   outline: none;
+   width: 200px;
+   transition: width 0.3s ease-in-out;
+}
+
+.search-input:focus {
+   width: 250px;
+   border-color: #278b3d;
+}
+
+.search-icon {
+   position: absolute;
+   right: 10px;
+   color: #666;
+   font-size: 1.2rem;
+   cursor: pointer;
+}
+
+.cart-icon {
+   display: flex;
+   align-items: center;
+   color: white;
+   font-size: 1.5rem;
+   text-decoration: none;
+   position: relative;
+   transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+   color: #278b3d;
+}
+
+#cart-count {
+   position: absolute;
+   top: -5px;
+   right: -10px;
+   background-color: #f00;
+   color: white;
+   font-size: 0.9rem;
+   padding: 3px 7px;
+   border-radius: 50%;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+   html {
+       font-size: 55%;
+   }
+
+   header {
+       padding: 2rem;
+   }
+}
+
+@media (max-width: 768px) {
+   header .navbar {
+       display: none; /* Hide the navbar on mobile */
+   }
+
+   header .fa-bars {
+       display: block;
+       font-size: 2rem;
+       cursor: pointer;
+       color: white;
+   }
+
+   header #toggler:checked .navbar {
+       display: flex;
+       flex-direction: column;
+       background-color: rgb(255, 255, 255);
+       border-top: 0.1rem solid black;
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+       position: absolute;
+       top: 100%;
+       left: 0;
+       right: 0;
+   }
+
+   header .navbar a {
+       margin: 1.5rem;
+       padding: 1.5rem;
+       background-color: rgb(255, 255, 255);
+       border: 0.1rem solid black;
+       display: block;
+       width: 100%;
+       text-align: center;
+   }
+}
+
+@media (max-width: 450px) {
+   html {
+       font-size: 50%;
+   }
+
+   .navbar a {
+       font-size: 1rem;
+   }
+}
+
+
+
+ 
+
+ 
+
+.img1{
+width: 350px;
+height: 500px;
+
+}
+
+.img2{
+    width: 350px;
+    height: 500px;
+    
+    }
+
+    .img3{
+        width: 350px;
+        height: 500px;
+        
+     }
+.texto{    
+    
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+
+ }
+
+ .texto1{    
+    
+    color: rgb(0, 0, 0);
+    text-decoration: none; 
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+
+ }
+
+ .texto2{    
+    
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+
+ }
+
+
+
+ .conta-wrapper {
+   display: flex;
+   justify-content: center; /* Centra las cards en la pantalla */
+   margin-top: 50px; /* Separa las cards del menú */
+   min-height: 500px; /* Asegura que el contenedor tenga suficiente altura para las cards */
+   flex-wrap: wrap; /* Permite que las cards se ajusten en varias filas si es necesario */
+   align-items: flex-start; /* Alinea las cards al principio del contenedor */
+}
+
+.conta {
+   display: flex;
+   flex-wrap: wrap; /* Asegura que las cards se ajusten a nuevas filas si no caben en la misma */
+   justify-content: space-between; /* Espacio uniforme entre las cards */
+   gap: 20px; /* Aumenta el espacio entre las cards */
+   width: 100%; /* Asegura que el contenedor de las cards ocupe todo el ancho disponible */
+   max-width: 1200px; /* Limita el ancho total para no hacer las cards demasiado anchas */
+}
+
+.espacio {
+   width: 250px; /* Establece un tamaño uniforme para todas las cards */
+   height: 400px; /* Establece la altura uniforme para todas las cards */
+   background-color: white;
+   border-radius: 10px;
+   text-align: center;
+   padding: 20px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between; /* Espacia el contenido de manera uniforme */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px; /* Añade un margen inferior para asegurarse de que no haya nada debajo */
+}
+
+.espacio img {
+   width: 100%; /* La imagen ocupa todo el ancho de la card */
+   height: 200px; /* Aumenta la altura de la imagen */
+   object-fit: contain; /* Asegura que la imagen se vea completamente sin recorte */
+   border-radius: 10px;
+}
+
+
+
+.titulo, .precio {
+   margin: 15px 0;
+}
+
+button {
+   margin-top: auto;
+   padding: 12px 20px;
+   background: linear-gradient(to right, #fce1e1, #fce1e1);
+   color: rgb(249, 249, 249);
+   border-radius: 8px;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   border: none;
+}
+
+button:hover {
+   background: linear-gradient(to right, #ffbbbb, #fbd1d1);
+   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 991px) {
+   .espacio {
+      width: 48%; /* Dos cards por fila en pantallas medianas */
+   }
+}
+
+@media (max-width: 768px) {
+   .espacio {
+      width: 100%; /* Una card por fila en pantallas pequeñas */
+   }
+}
+
+
+  
+
+.cart-icon {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   background-color: #fce1e1; 
+   color: white;
+   padding: 12px 18px;
+   border-radius: 50px;
+   font-size: 20px;
+   text-decoration: none;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   transition: transform 0.2s ease-in-out;
+}
+
+.cart-icon:hover {
+   transform: scale(1.1);
+   background-color: rgb(0, 0, 0); /* Un color más fuerte al pasar el mouse */
+}
+
+#cart-count {
+   background: white;
+   color: #fce1e1;
+   font-size: 14px;
+   font-weight: bold;
+   padding: 3px 8px;
+   border-radius: 50%;
+}
+
+.cart-icon {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   background-color: #ffffff; /* Color llamativo */
+   color: white;
+   padding: 6px 10px; /* 🔥 Reduce el tamaño */
+   font-size: 16px; /* 🔥 Reduce el tamaño del icono */
+   border-radius: 30px;
+   text-decoration: none;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#cart-count {
+   background: white;
+   color:#fce1e1;
+   font-size: 12px; /* 🔥 Reduce el tamaño del número */
+   padding: 2px 5px;
+   border-radius: 50%;
+}
+
+
+
+.contenido1 {
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+}
+
+.conta {
+   display: flex;
+   flex-wrap: wrap; /* Permite que las cards se ajusten a una nueva fila si no caben */
+   justify-content: center; /* Centra las cards */
+   gap: 20px; /* Espacio entre las cards */
+   max-width: 1200px; /* Limita el ancho total */
+}
+
+.espacio {
+   background-color: white;
+   width: 280px; /* Establece un tamaño fijo para cada card */
+   border-radius: 10px;
+   text-align: center;
+   padding: 15px;
+   transition: transform 0.5s;
+}
+
+.espacio:hover {
+   transform: scale(1.05); /* Efecto de agrandado al pasar el ratón */
+}
+
+.imagen {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+}
+
+.titulo {
+   margin: 10px;
+   color: rgb(0, 0, 0);
+}
+
+.precio {
+   color: rgb(0, 0, 0);
+   margin: 8px;
+}
+
+button {
+   border: 2px solid transparent;
+   background: linear-gradient(to right, #fce1e1,#facece);
+   color: rgb(255, 255, 255);
+   padding: 10px 15px;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   position: relative;
+   overflow: hidden;
+}
+
+/* Borde dinámico en hover */
+button:hover {
+   border-color: rgb(0, 0, 0);
+   background: linear-gradient(to right, #ffb5b5, #fce1e1);
+   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Efecto de resplandor */
+button::before {
+   content: "";
+   position: absolute;
+   top: -2px;
+   left: -2px;
+   right: -2px;
+   bottom: -2px;
+   border-radius: 8px;
+   border: 2px solid white;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar el borde brillante al pasar el mouse */
+button:hover::before {
+   opacity: 1;
+}
+
+button a {
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   display: block;
+}

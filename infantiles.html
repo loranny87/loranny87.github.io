@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="infantiles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+</div>
+
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+<br>
+
+    <div class="conta">
+        <div class="espacio">
+            <img src="oso.webp" width="200" class="imagen">
+            <h3 class="titulo">oso</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('oso', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="cocodrilo.webp" width="200" class="imagen">
+            <h3 class="titulo">cocodrilo</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('cocodrilo', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="Princesas.webp" width="200" class="imagen">
+            <h3 class="titulo">Princesas</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('Princesas', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="Encanto.webp" width="200" class="imagen">
+            <h3 class="titulo">Encanto</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('Encanto', 100)">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <div class="conta">
+    <div class="espacio">
+        <img src="El Patito Feo.jpeg" width="200" class="imagen">
+        <h3 class="titulo">El Patito Feo</h3>
+        <h2 class="precio">$120</h2>
+        <button onclick="addToCart('Patito Feo', 120)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="los jugetes magicos.webp" width="200" class="imagen">
+        <h3 class="titulo">Los Juguetes Mágicos</h3>
+        <h2 class="precio">$110</h2>
+        <button onclick="addToCart('Juguetes Mágicos', 110)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="https://proassetspdlcom.cdnstatics2.com/usuaris/libros/thumbs/f77fae16-7120-41c8-bcc3-54fd707370be/d_360_620/portada___202408071239.webp"width="200" class="imagen">
+        <h3 class="titulo">Caperucita Roja</h3>
+        <h2 class="precio">$130</h2>
+        <button onclick="addToCart('Caperucita Roja', 130)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="https://imagessl3.casadellibro.com/a/l/t5/86/9791387563486.jpg" width="200" class="imagen">
+        <h3 class="titulo">Alicia en el País de las Maravillas</h3>
+        <h2 class="precio">$140</h2>
+        <button onclick="addToCart('Alicia en el País de las Maravillas', 140)">Añadir al carrito</button>
+    </div>
+</div>
+
+
+    <script>
+        // Función para filtrar los productos según la búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+            let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+      
+            items.forEach(item => {
+                let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                
+                if (title.includes(searchQuery)) {
+                    item.style.display = 'block'; // Si coincide, muestra el elemento
+                } else {
+                    item.style.display = 'none'; // Si no coincide, oculta el elemento
+                }
+            });
+        });
+      </script>
+      

@@ -1,0 +1,45 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #ffcdcd; /* Fondo beige claro */
+}
+
+/* Contenedor de las imágenes del carrusel */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+    width: 300%; /* Tres imágenes en total, cada una ocupa 100% del contenedor */
+}
+
+/* Estilos de las imágenes del carrusel */
+.carousel-images img {
+    width: 33.33%; /* Cada imagen ocupa el 33.33% del ancho total */
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Botones de navegación */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px; /* Tamaño de los signos */
+}
+
+/* Botón izquierdo */
+.carousel-button.prev {
+    left: 10px;
+}
+
+/* Botón derecho */
+.carousel-button.next {
+    right: 10px;
+}

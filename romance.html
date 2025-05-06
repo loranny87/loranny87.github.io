@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="romance.css">
+    <script src="carrito.js"></script>
+    
+
+</head>
+<body>
+
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+</div>
+
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+
+
+        <div class="conta-wrapper">
+          <div class="conta">
+              <div class="espacio">
+                  <img src="Turno de noche.webp" width="200" class="imagen">
+                  <h3 class="titulo">Turno de Noche</h3>
+                  <h2 class="precio">$100</h2>
+                  <button onclick="addToCart('Turno de Noche', 100)">Añadir al carrito</button>
+              </div>
+      
+              <div class="espacio">
+                  <img src="Quedará el amor.webp" width="200" class="imagen">
+                  <h3 class="titulo">Quedará el amor</h3>
+                  <h2 class="presios">100$</h2>
+                  <button onclick="addToCart('Quedará el amor', 100)">Añadir al carrito</button>
+              </div>
+      
+              <div class="espacio">
+                  <img src="Donde no puedas encontrarme.webp" width="200" class="imagen">
+                  <h3 class="titulo">Donde no puedes encontrarme</h3>
+                  <h2 class="presios">100$</h2>
+                  <button onclick="addToCart('Donde no puedes encontrarme', 100)">Añadir al carrito</button>
+              </div>
+      
+              <div class="espacio">
+                  <img src="cuando el horizonte se vuelve amarillo.jpg" width="200" class="imagen">
+                  <h3 class="titulo">Cuando el horizonte se vuelve amarillo</h3>
+                  <h2 class="presios">100$</h2>
+                  <button onclick="addToCart('Cuando el horizonte se vuelve amarillo', 100)">Añadir al carrito</button>
+              </div>
+              </div>
+
+              <div class="conta">
+              <div class="espacio">
+                <img src="Tú a Chicago, yo a Nueva York.webp " width="200" class="imagen">
+                <h3 class="titulo">tu a chicago, yo a nueva york</h3>
+                <h2 class="presios">100$</h2>
+                <button onclick="addToCart('Cuando el horizonte se vuelve amarillo', 100)">Añadir al carrito</button>
+            </div>
+
+                <div class="espacio">
+                    <img src="https://imagessl2.casadellibro.com/a/l/t5/48/9788418483448.jpg" width="200" class="imagen">
+                    <h3 class="titulo">Antes de diciembre</h3>
+                    <h2 class="precio">19,00€</h2>
+                    <button onclick="addToCart('Antes de diciembre', 19.00)">Añadir al carrito</button>
+                </div>
+            
+                <div class="espacio">
+                    <img src="https://imagessl3.casadellibro.com/a/l/t5/25/9788417605025.jpg" width="200" class="imagen">
+                    <h3 class="titulo">A dos metros de ti</h3>
+                    <h2 class="precio">16,95€</h2>
+                    <button onclick="addToCart('A dos metros de ti', 16.95)">Añadir al carrito</button>
+                </div>
+            
+                <div class="espacio">
+                    <img src="https://imagessl1.casadellibro.com/a/l/t5/78/9788466674478.jpg" width="200" class="imagen">
+                    <h3 class="titulo">Romper el hielo (Maple Hills 1)</h3>
+                    <h2 class="precio">18,90€</h2>
+                    <button onclick="addToCart('Romper el hielo (Maple Hills 1)', 18.90)">Añadir al carrito</button>
+                </div>
+                </div>
+            
+
+            
+
+
+            <script>
+                // Función para filtrar los productos según la búsqueda
+                document.getElementById('searchInput').addEventListener('input', function() {
+                    let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+                    let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+              
+                    items.forEach(item => {
+                        let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                        
+                        if (title.includes(searchQuery)) {
+                            item.style.display = 'block'; // Si coincide, muestra el elemento
+                        } else {
+                            item.style.display = 'none'; // Si no coincide, oculta el elemento
+                        }
+                    });
+                });
+              </script>
+              
+
+
+            
+
+          </div>
+      </div>
+      
+

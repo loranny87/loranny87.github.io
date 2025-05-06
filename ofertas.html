@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books.shop</title>
+    <link rel="stylesheet" href="ofertas.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Barra de menú -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Books.shop</div>
+            <div class="search-container">
+                <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Buscar libros...">
+            </div>
+        </nav>
+    </header>
+
+    <div class="conta-wrapper">
+        <div class="conta">
+            <div class="espacio" data-title="Turno de Noche">
+                <img src="Turno de noche.webp" width="200" class="imagen">
+                <h3 class="titulo">Turno de Noche</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('Turno de Noche', 100)">Añadir al carrito</button>
+            </div>
+
+            <div class="espacio" data-title="Donde no puedes encontrarme">
+                <img src="Donde no puedas encontrarme.webp" width="200" class="imagen">
+                <h3 class="titulo">Donde no puedes encontrarme</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('Donde no puedes encontrarme', 100)">Añadir al carrito</button>
+            </div>
+
+            <div class="espacio" data-title="Tú a Chicago, yo a Nueva York">
+                <img src="Tú a Chicago, yo a Nueva York.webp" width="200" class="imagen">
+                <h3 class="titulo">Tú a Chicago, yo a Nueva York</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('Tú a Chicago, yo a Nueva York', 100)">Añadir al carrito</button>
+            </div>
+
+            <div class="espacio" data-title="Murdle Resuelve el crimen">
+                <img src="Murdle Resuelve el crimen.webp" width="200" class="imagen">
+                <h3 class="titulo">Murdle Resuelve el crimen</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('Murdle Resuelve el crimen', 100)">Añadir al carrito</button>
+            </div>
+
+            <div class="espacio" data-title="Takarabune">
+                <img src="Takarabune.webp" width="200" class="imagen">
+                <h3 class="titulo">Takarabune</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('Takarabune', 100)">Añadir al carrito</button>
+            </div>
+
+            <div class="espacio" data-title="La hora azul">
+                <img src="La hora azul.webp" width="200" class="imagen">
+                <h3 class="titulo">La hora azul</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('La hora azul', 100)">Añadir al carrito</button>
+            </div>
+
+            <div class="espacio" data-title="Persiguiendo a Bécquer">
+                <img src="Persiguiendo a Bécquer.webp" width="200" class="imagen">
+                <h3 class="titulo">Persiguiendo a Bécquer</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('Persiguiendo a Bécquer', 100)">Añadir al carrito</button>
+            </div>
+
+            <div class="espacio" data-title="Japan Sinks">
+                <img src="Japan Sinks.webp" width="200" class="imagen">
+                <h3 class="titulo">Japan Sinks</h3>
+                <h2 class="precio">$100</h2>
+                <button onclick="addToCart('Japan Sinks', 100)">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<center><h1>Libros gratis</h1> </center>
+
+
+<div class="conta-wrapper">
+    <div class="conta">
+        <div class="espacio" data-title="Turno de Noche">
+            <img src="https://imagessl7.casadellibro.com/a/l/s7/27/9788427248427.webp" width="200" class="imagen">
+            <h3 class="titulo">Los juegos del hambre 5</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('Los juegos del hambre 5', 100)">Añadir al carrito</button>
+        </div>
+
+
+
+
+
+
+
+    <script>
+        function searchBooks() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const cards = document.querySelectorAll('.espacio');
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title');
+                if (title.toUpperCase().indexOf(filter) > -1) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

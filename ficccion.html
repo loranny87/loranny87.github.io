@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKS.SHOP</title>
+    <link rel="stylesheet" href="ficcion.css">
+    <script src="carrito.js"></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+</div>
+
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+
+<br>
+          <div class="conta">
+              <div class="espacio">
+                  <img src="Takarabune.webp" width="200" class="imagen">
+                  <h3 class="titulo">Takarabune</h3>
+                  <h2 class="precio">100$</h2>
+                  <button onclick="addToCart('Turno de Noche', 100)">Añadir al carrito</button>
+              </div>
+      
+              <div class="espacio">
+                  <img src="Niebla roja.webp" width="200" class="imagen">
+                  <h3 class="titulo">Niebla roja</h3>
+                  <h2 class="precio">100$</h2>
+                  <button onclick="addToCart('Niebla roja', 100)">Añadir al carrito</button>
+              </div>
+      
+              <div class="espacio">
+                  <img src="Japan Sinks.webp" width="200" class="imagen">
+                  <h3 class="titulo">Japan sinks</h3>
+                  <h2 class="precio">100$</h2>
+                  <button onclick="addToCart('Japan Sinks', 100)">Añadir al carrito</button>
+              </div>
+      
+              <div class="espacio">
+                  <img src="Ciencia, Amor y Otras Genéticas.png" width="200" class="imagen">
+                  <h3 class="titulo">Ciencia, Amor y Otras Genéticas</h3>
+                  <h2 class="precio">100$</h2>
+                  <button onclick="addToCart('Ciencia, Amor y Otras Genéticas', 100)">Añadir al carrito</button>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="conta">
+        <div class="espacio">
+            <img src="https://imagessl5.casadellibro.com/a/l/t5/79/9788499082479.jpg" width="200" class="imagen">
+            <h3 class="titulo">El nombre del viento</h3>
+            <h2 class="precio">$150</h2>
+            <button onclick="addToCart('El nombre del viento', 150)">Añadir al carrito</button>
+        </div>
+    
+        <div class="espacio">
+            <img src="https://imagessl0.casadellibro.com/a/l/t5/50/9788408163350.jpg" width="200" class="imagen">
+            <h3 class="titulo">La sombra del viento</h3>
+            <h2 class="precio">$120</h2>
+            <button onclick="addToCart('La sombra del viento', 120)">Añadir al carrito</button>
+        </div>
+    
+        <div class="espacio">
+            <img src="https://imagessl3.casadellibro.com/a/l/s7/73/9788445010273.webp" width="200" class="imagen">
+            <h3 class="titulo">1984</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('1984', 100)">Añadir al carrito</button>
+        </div>
+    
+        <div class="espacio">
+            <img src="https://imagessl5.casadellibro.com/a/l/t5/04/9788483835104.jpg" width="200" class="imagen">
+            <h3 class="titulo">Crónica del pájaro que da cuerda al mundo</h3>
+            <h2 class="precio">$130</h2>
+            <button onclick="addToCart('Crónica del pájaro que da cuerda al mundo', 130)">Añadir al carrito</button>
+        </div>
+    </div>
+    
+      
+
+
+      <script>
+        // Función para filtrar los productos según la búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+            let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+      
+            items.forEach(item => {
+                let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                
+                if (title.includes(searchQuery)) {
+                    item.style.display = 'block'; // Si coincide, muestra el elemento
+                } else {
+                    item.style.display = 'none'; // Si no coincide, oculta el elemento
+                }
+            });
+        });
+      </script>
+      
+      
+
+      </head>
+      </body>

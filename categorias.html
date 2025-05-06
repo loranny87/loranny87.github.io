@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books.shop</title>
+    <link rel="stylesheet" href="categorias.css">
+    <script src="carrito.js"></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+    <nav class="navbar">
+        <a href="ubicados.html">Ubicados</a>
+        <a href="valores.html">¿Quiénes somos?</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="index.html">Inicio</a>
+    </nav>
+  
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
+        <i class="search-icon fas fa-search"></i>
+    </div>
+  
+    <a href="carrito.html" class="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </a>
+  </header>
+  
+  <!-- Contenedor de categorías -->
+  <div class="container">
+      <div class="card">
+          <div class="contenido">
+              <h3>Novela Histórica</h3>
+              <p>Sumérgete en la historia con estos relatos fascinantes.</p>
+              <a href="historica.html">Leer más</a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="contenido">
+              <h3>Novela de Romance</h3>
+              <p>Vive historias de amor que te llegarán al corazón.</p>
+              <a href="romance.html">Leer más</a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="contenido">
+              <h3>Novela de Misterio</h3>
+              <p>Un misterio tras otro. ¿Estás listo para descubrirlo?</p>
+              <a href="misterio.html">Leer más</a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="contenido">
+              <h3>Novela de Ficción</h3>
+              <p>Escapismos fantásticos que desafían la imaginación.</p>
+              <a href="ficccion.html">Leer más</a>
+          </div>
+      </div>
+  </div>
+  
+  <div class="container">
+      <div class="card">
+          <div class="contenido">
+              <h3>Novelas infantiles</h3>
+              <p>Sumergete en este mundo de colores y cuentos infantiles.</p>
+              <a href="infantiles.html">Leer más</a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="contenido">
+              <h3>Novelas juveniles</h3>
+              <p>¿Te gusta el misterio y el romance juvenil? Este lugar es para ti.</p>
+              <a href="juveniles.html">Leer más</a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="contenido">
+              <h3>Novelas de ciencia</h3>
+              <p>Eres un gran fan de la ciencia? Si es así, este es el lugar indicado.</p>
+              <a href="ciencia.html">Leer más</a>
+          </div>
+      </div>
+      <div class="card">
+          <div class="contenido">
+              <h3>Novelas de cocina</h3>
+              <p>Saca el chef que llevas dentro con la ayuda de los mejores cocineros.</p>
+              <a href="cocina.html">Leer más</a>
+          </div>
+      </div>
+  </div>
+
+  <script>// Obtener el campo de búsqueda
+    document.getElementById("search-input").addEventListener("input", function() {
+        // Obtener el valor que el usuario escribió en el campo de búsqueda
+        let query = this.value.toLowerCase();
+    
+        // Seleccionar todas las tarjetas
+        let cards = document.querySelectorAll(".card");
+    
+        // Iterar sobre cada tarjeta
+        cards.forEach(function(card) {
+            let title = card.querySelector("h3").textContent.toLowerCase(); // Obtener el título de la tarjeta
+    
+            // Comprobar si el título de la tarjeta contiene el texto buscado
+            if (title.includes(query)) {
+                card.style.display = "block"; // Mostrar la tarjeta
+            } else {
+                card.style.display = "none"; // Ocultar la tarjeta
+            }
+        });
+    });
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="misterio.css">
+    <script src="carrito.js" defer></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+</div>
+
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+<br> <br>
+    <div class="conta">
+        <div class="espacio">
+            <img src="Murdle Resuelve el crimen.webp" width="200" class="imagen">
+            <h3 class="titulo">Murdle Resuelve el crimen</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('Murdle Resuelve el crimen', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="Persiguiendo a Bécquer.webp" width="200" class="imagen">
+            <h3 class="titulo">Persiguiendo a Bécquer</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('Persiguiendo a Bécquer', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="La hora azul.webp" width="200" class="imagen">
+            <h3 class="titulo">La hora azul</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('La hora azul', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="El velero.png" width="200" class="imagen">
+            <h3 class="titulo">El velero</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('El velero', 100)">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <div class="conta">
+    <div class="espacio">
+        <img src="Encanto.webp" width="200" class="imagen">
+        <h3 class="titulo">Entrada al infierno</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('Entrada al infierno', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="La oferta final.webp" width="200" class="imagen">
+        <h3 class="titulo">La dulzura del peligro</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('La dulzura del peligro', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="https://proassetspdlcom.cdnstatics2.com/usuaris/libros/thumbs/9a1cc5ee-db4c-49a9-b863-f4f5c7a61db1/d_360_620/portada_la-tentacion-mas-oscura_danielle-lori_202504080905.webp" width="200" class="imagen">
+        <h3 class="titulo">Tentación Oscura</h3>
+        <h2 class="precio">$100</h2> 
+        <button onclick="addToCart('Tentación Oscura', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="espacio">
+        <img src="La nevera media llena.webp" width="200" class="imagen">
+        <h3 class="titulo">La sombra de la bailarina</h3>
+        <h2 class="precio">$100</h2>
+        <button onclick="addToCart('La sombra de la bailarina', 100)">Añadir al carrito</button>
+    </div>
+
+
+
+    <script>
+        // Función para filtrar los productos según la búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+            let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+      
+            items.forEach(item => {
+                let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                
+                if (title.includes(searchQuery)) {
+                    item.style.display = 'block'; // Si coincide, muestra el elemento
+                } else {
+                    item.style.display = 'none'; // Si no coincide, oculta el elemento
+                }
+            });
+        });
+      </script>
+      
+
+
+
+    </head>
+    </body>

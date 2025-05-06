@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="infantiles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+</div>
+
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+
+<br>
+    <div class="conta">
+        <div class="espacio">
+            <img src="Un amor agridulce.webp" width="200" class="imagen">
+            <h3 class="titulo">un amor agridulce</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('un amor agridulce', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="La oferta final.webp" width="200" class="imagen">
+            <h3 class="titulo">La oferta final</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('La oferta final', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="con traumas y a lo loco.webp" width="200" class="imagen">
+            <h3 class="titulo">Con traumas y a lo loco</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('con traumas y a lo loco', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="El cielo que nos une.webp" width="200" class="imagen">
+            <h3 class="titulo">El cielo que nos une</h3>
+            <h2 class="precio">$100</h2>
+            <button onclick="addToCart('El cielo que nos une', 100)">Añadir al carrito</button>
+        </div>
+    </div>
+
+         <div class="conta">
+         <div class="espacio">
+            <img src="https://imagessl5.casadellibro.com/a/l/s7/85/9788408299585.webp" width="200" class="imagen">
+            <h3 class="titulo">nuestro lugar en el mundo</h3>
+            <h2 class="precio">$180</h2>
+            <button onclick="addToCart('nuestro lugar en el mundo', 180)">Añadir al carrito</button>
+         </div>
+    
+
+         <div class="espacio">
+            <img src="https://imagessl9.casadellibro.com/a/l/s7/69/9788410163669.webp" width="200" class="imagen">
+            <h3 class="titulo">Reina de sombras</h3>
+            <h2 class="precio">$160</h2>
+            <button onclick="addToCart('Reina de sombras', 160)">Añadir al carrito</button>
+         </div>
+    
+
+         <div class="espacio">
+            <img src="https://imagessl6.casadellibro.com/a/l/s7/76/9788410163676.webp" width="200" class="imagen">
+            <h3 class="titulo">Imperio de tormentas</h3>
+            <h2 class="precio">$200</h2>
+            <button onclick="addToCart('Imperio de tormentas', 200)">Añadir al carrito</button>
+         </div>
+    
+  
+         <div class="espacio">
+            <img src="https://imagessl1.casadellibro.com/a/l/s7/81/9788410163881.webp" width="200" class="imagen">
+            <h3 class="titulo">Los juegos de los dioses </h3>
+            <h2 class="precio">$180</h2>
+            <button onclick="addToCart('Los juegos de los dioses', 180)">Añadir al carrito</button>
+         </div>
+    </div>
+    
+    
+    
+
+
+
+    <script>
+        // Función para filtrar los productos según la búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+            let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+      
+            items.forEach(item => {
+                let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                
+                if (title.includes(searchQuery)) {
+                    item.style.display = 'block'; // Si coincide, muestra el elemento
+                } else {
+                    item.style.display = 'none'; // Si no coincide, oculta el elemento
+                }
+            });
+        });
+      </script>
+      

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="historica.css">
+    <script src="carrito.js"></script>
+</head>
+<body>
+
+<!-- header section starts-->
+<header>
+  <nav class="navbar">
+      <a href="ubicados.html">Ubicados</a>
+      <a href="valores.html">¿Quiénes somos?</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="index.html">Inicio</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+    <i class="search-icon fas fa-search"></i>
+</div>
+
+  <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+  </a>
+</header>
+
+<br>
+    <div class="conta">
+        <div class="espacio">
+            <img src="Amira.webp" width="200" class="imagen">
+            <h3 class="titulo">Amira</h3>
+            <h2 class="precio">100$</h2>
+            <button onclick="addToCart('Amira', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="Personalidad y poder.webp" width="200" class="imagen">
+            <h3 class="titulo">Personalidad y poder</h3>
+            <h2 class="precio">100$</h2>
+            <button onclick="addToCart('Personalidad y poder', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="La montaña del tesoro.webp" width="200" class="imagen">
+            <h3 class="titulo">La montaña del tesoro</h3>
+            <h2 class="precio">100$</h2>
+            <button onclick="addToCart('La montaña del tesoro', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="espacio">
+            <img src="El soldado desafinado.webp" width="200" class="imagen">
+            <h3 class="titulo">El soldado desafinado</h3>
+            <h2 class="precio">100$</h2>
+            <button onclick="addToCart('El soldado desafinado', 100)">Añadir al carrito</button>
+        </div>
+    </div>
+
+
+    <div class="conta">
+        <div class="espacio">
+            <img src="https://imagessl0.casadellibro.com/a/l/t5/14/9788499086514.jpg" width="200" class="imagen">
+            <h3 class="titulo">Los pilares de la Tierra</h3>
+            <h2 class="precio">$250</h2>
+            <button onclick="addToCart('Los pilares de la Tierra', 250)">Añadir al carrito</button>
+        </div>
+    
+        <div class="espacio">
+            <img src="https://imagessl5.casadellibro.com/a/l/t5/20/9788466360920.jpg" width="200" class="imagen">
+            <h3 class="titulo">Sidi</h3>
+            <h2 class="precio">$200</h2>
+            <button onclick="addToCart('Sidi', 200)">Añadir al carrito</button>
+        </div>
+    
+        <div class="espacio">
+            <img src="https://imagessl1.casadellibro.com/a/l/t5/86/9788425367786.jpg" width="200" class="imagen">
+            <h3 class="titulo">La catedral del mar</h3>
+            <h2 class="precio">$220</h2>
+            <button onclick="addToCart('La catedral del mar', 220)">Añadir al carrito</button>
+        </div>
+    
+        <div class="espacio">
+            <img src="https://imagessl0.casadellibro.com/a/l/t5/19/9788435062619.jpg" width="200" class="imagen">
+            <h3 class="titulo">Yo, Claudio</h3>
+            <h2 class="precio">$180</h2>
+            <button onclick="addToCart('Yo, Claudio', 180)">Añadir al carrito</button>
+        </div>
+    </div>
+    
+
+
+    <script>
+        // Función para filtrar los productos según la búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+            let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+      
+            items.forEach(item => {
+                let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                
+                if (title.includes(searchQuery)) {
+                    item.style.display = 'block'; // Si coincide, muestra el elemento
+                } else {
+                    item.style.display = 'none'; // Si no coincide, oculta el elemento
+                }
+            });
+        });
+      </script>
+      
+
+
+    </head>
+    </body>

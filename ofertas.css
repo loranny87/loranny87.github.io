@@ -1,0 +1,143 @@
+/* Contenedor principal */
+.conta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Contenedor de las cards */
+.conta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px;
+    width: 80%;
+}
+
+/* Estilos para cada card */
+.espacio {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagen {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.precio {
+    font-size: 20px;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+/* Estilos para la barra de menú */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-container {
+    width: 50%;
+    text-align: right;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Estilos para las cards */
+.conta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.conta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px;
+    width: 80%;
+}
+
+/* Estilos para cada card */
+.espacio {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.imagen {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.precio {
+    font-size: 20px;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Shop</title>
+    <link rel="stylesheet" href="ubicados.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Header con menú mejorado -->
+<header>
+    <a href="#" class="logo">Books<span>.Shop</span></a>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="valores.html">Quiénes Somos</a>
+        <a href="ubicados.html">Ubicación</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+        <i class="search-icon fas fa-search"></i>
+    </div>
+    
+</header>
+
+<!-- Contenido principal -->
+<main>
+    <center>
+        <h1>Encuéntranos</h1>
+        <h2>Estamos ubicados en Licey al Medio, Las Palomas, entrada de los Profesores.</h2>
+
+        <img src="mapa.jpeg" width="500" usemap="#image-map">
+        <map name="image-map">
+            <area target="_blank" href="https://www.google.com/maps/@19.4267866,-70.537338,11.72z?entry=ttu" coords="167,150,156,153,149,168,147,182,951,195,55,105,158,313," shape="poly">
+        </map>
+    </center>
+</main>
+
+</body>
+</html>
+
+
+<script>
+    // Función para filtrar los productos según la búsqueda
+    document.getElementById('searchInput').addEventListener('input', function() {
+        let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+        let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+  
+        items.forEach(item => {
+            let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+            
+            if (title.includes(searchQuery)) {
+                item.style.display = 'block'; // Si coincide, muestra el elemento
+            } else {
+                item.style.display = 'none'; // Si no coincide, oculta el elemento
+            }
+        });
+    });
+  </script>
+  
