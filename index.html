@@ -27,12 +27,21 @@
             <a href="categorias.html">contacnos</a>
         </nav>
 
+
         <div class="search-container">
             <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
-            <i class="search-icon fas fa-search"></i>
-        </div>
-        
-        <a href="iniciar sesion.html" class="logo">Books.shop <span>.</span></a>
+            <button class="search-button" id="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          
+          
+          <div style="margin-right: 20px;">
+          <a href="iniciar sesion.html" class="logo"><i class="fas fa-sign-in-alt"></i></a>
+          </div>
+          
+
+
     </header>
 <br>
     <div class="carousel-container">
@@ -138,6 +147,28 @@
             <p>&copy; 2025 Books.shop | Todos los derechos reservados.</p>
         </div>
     </footer>
+
+
+
+    <script>
+        // Función para filtrar los productos según la búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let searchQuery = this.value.toLowerCase(); // Obtén el valor de la búsqueda en minúsculas
+            let items = document.querySelectorAll('.espacio'); // Selecciona todos los elementos de los libros
+      
+            items.forEach(item => {
+                let title = item.querySelector('.titulo').textContent.toLowerCase(); // Obtén el texto del título del libro
+                
+                if (title.includes(searchQuery)) {
+                    item.style.display = 'block'; // Si coincide, muestra el elemento
+                } else {
+                    item.style.display = 'none'; // Si no coincide, oculta el elemento
+                }
+            });
+        });
+      </script>
+
+
 
 </body>
 </html>

@@ -22,3 +22,6 @@ function updateCarousel() {
 setInterval(() => {
     moveSlide(0);
 }, 4000);
+
+
+
