@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Books.shop</title>
+<link rel="stylesheet" href="prueba.css">
+<script src="prueba.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Books.shop</h1>
+    <div class="header-right">
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Catálogo</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+      </nav>
+      <div id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <div id="cart-panel">
+    <h4>Carrito de compras</h4>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button id="vaciar-btn">Vaciar carrito</button>
+  </div>
+
+  <div class="search-filter-wrapper">
+    <input type="text" id="search-input" placeholder="Buscar libros por título...">
+    <select id="genre-filter">
+      <option value="todos">Todos</option>
+      <option value="ficcion">Ficción</option>
+      <option value="romance">Romance</option>
+      <option value="ciencia">Ciencia</option>
+      <option value="misterio">Misterio</option>
+    </select>
+  </div>
+
+  <main class="book-grid">
+    <div class="book" data-title="El Viaje del Tiempo" data-genre="ciencia">
+      <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c" alt="Libro 1">
+      <h3>El Viaje del Tiempo</h3>
+      <p>$20</p>
+      <button class="add-to-cart" data-name="El Viaje del Tiempo" data-price="20">Agregar al carrito</button>
+    </div>
+    <div class="book" data-title="Amor Eterno" data-genre="romance">
+      <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93" alt="Libro 2">
+      <h3>Amor Eterno</h3>
+      <p>$15</p>
+      <button class="add-to-cart" data-name="Amor Eterno" data-price="15">Agregar al carrito</button>
+    </div>
+    <div class="book" data-title="Sombras del Misterio" data-genre="misterio">
+      <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d" alt="Libro 3">
+      <h3>Sombras del Misterio</h3>
+      <p>$18</p>
+      <button class="add-to-cart" data-name="Sombras del Misterio" data-price="18">Agregar al carrito</button>
+    </div>
+  </main>
+
+
+
+</body>
+</html>
